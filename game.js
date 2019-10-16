@@ -63,6 +63,7 @@ window.addEventListener('keydown', event => {
     direction = 'left'
   }
 
+
 })
 
 // todo program the game
@@ -72,6 +73,7 @@ function loop(){
   if (direction === 'right'){
     let newHead = {x: head.x + 1, y: head.y}
     snake.push(newHead)
+
   }
   if (direction === 'down'){
     let newHead = {x: head.x, y: head.y + 1}
@@ -85,6 +87,7 @@ function loop(){
     let newHead = {x: head.x - 1, y: head.y}
     snake.push(newHead)
   }
+  snake.shift()
 
   erase()
   drawSnake()
